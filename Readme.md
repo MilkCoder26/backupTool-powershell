@@ -76,9 +76,9 @@ Each user gets their own `logs` folder, making the tool multi-user safe.
 
 ## 🖥️ Installation
 
-### Option 1: Using `install.ps1` (Recommended)
+### Using `install.ps1` (Recommended)
 
-1. Download `install.ps1` :
+Download `install.ps1` :
 
 ```powershell
 pwsh -NoProfile -Command `
@@ -100,7 +100,7 @@ pwsh -NoProfile -Command `
 
 ### Graphical Interface (Recommended for end users)
 
-1. Double-click `BackupGUI.exe`
+1. Double-click `Backup.exe`
 2. Select:
    - Source path (e.g. `E:\`)
    - Destination path (e.g. `D:\`)
