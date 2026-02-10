@@ -1,6 +1,6 @@
-# BackupTools
+# BackupTool
 
-**BackupTools** is a simple, user-friendly disk backup utility for Windows.  
+**BackupTool** is a simple, user-friendly disk backup utility for Windows.  
 It allows non-technical users to perform complete, incremental, differential, or dry-run backups of a disk or folder using a graphical interface, while relying on the robustness of **RoboCopy** in the background.
 
 The tool is designed to be:
