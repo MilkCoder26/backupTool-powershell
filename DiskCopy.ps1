@@ -66,9 +66,9 @@ $RoboCopyBaseArgs = @(
     "/E",              # Copy all subfolders
     "/COPY:DAT",       # Data, Attributes, Timestamps
     "/DCOPY:T",        # Preserve directory timestamps
+    "/MT:16", 
     "/R:2",
     "/W:2",
-    "/V",
     "/TEE",
     "/LOG+:$LogPath"
 )
