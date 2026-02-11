@@ -122,6 +122,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 You can also run backups directly:
 
 ```powershell
+pwsh #to start executing
 DiskCopy -SourcePath "E:\" -DestinationRoot "D:\" -Mode Complete
 ```
 
