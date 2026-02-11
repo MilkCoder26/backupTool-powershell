@@ -108,7 +108,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 ### Graphical Interface (Recommended for end users)
 
-1. Go to the folder `C:\Users\JohnDoe\BackupTools` Double-click `Backup.exe`
+1. Go to the folder `C:\Users\YOUR_USERNAME\BackupTools` Double-click `Backup.exe`
 2. Select:
    - Source path (e.g. `E:\`)
    - Destination path (e.g. `D:\`)
