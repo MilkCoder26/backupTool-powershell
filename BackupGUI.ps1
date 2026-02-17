@@ -117,8 +117,8 @@ $script:currentLogFile = $null
 $script:lastLogPosition = 0
 $script:backupProcess = $null
 
-$timer.Add_Tick({
-    if ($script:currentLogFile -and (Test-Path $script:currentLogFile)) {
+function Get-LogFileContent {
+    if($script:currentLogFile -and (Test-Path $script:currentLogFile)) {
         try {
             $fileStream = [System.IO.File]::Open($script:currentLogFile, 'Open', 'Read', 'ReadWrite')
             $fileStream.Position = $script:lastLogPosition
@@ -135,11 +135,12 @@ $timer.Add_Tick({
             $reader.Close()
             $fileStream.Close()
         }
-        catch {
-            # File might be locked, skip this iteration
-        }
+        catch {}
     }
-    
+}
+
+$timer.Add_Tick({
+    Get-LogFileContent   
     # Check if backup process is still running
     if ($script:backupProcess -ne $null) {
         if ($script:backupProcess.HasExited) {
@@ -150,24 +151,7 @@ $timer.Add_Tick({
             
        
             Start-Sleep -Milliseconds 500
-            if ($script:currentLogFile -and (Test-Path $script:currentLogFile)) {
-                try {
-                    $fileStream = [System.IO.File]::Open($script:currentLogFile, 'Open', 'Read', 'ReadWrite')
-                    $fileStream.Position = $script:lastLogPosition
-                    $reader = New-Object System.IO.StreamReader($fileStream)
-                    $finalContent = $reader.ReadToEnd()
-                    
-                    if ($finalContent) {
-                        $txtLog.AppendText($finalContent)
-                        $txtLog.SelectionStart = $txtLog.Text.Length
-                        $txtLog.ScrollToCaret()
-                    }
-                    
-                    $reader.Close()
-                    $fileStream.Close()
-                }
-                catch {}
-            }
+            Get-LogFileContent
             
             $txtLog.AppendText("`r`n`r`n=== Backup completed ===`r`n")
             $txtLog.SelectionStart = $txtLog.Text.Length

@@ -13,7 +13,7 @@
 # CONFIGURATION (CHANGE THESE)
 # -------------------------------
 
-$GitHubBaseUrl = "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main"
+$GitHubBaseUrl = "https://raw.githubusercontent.com/MilkCoder26/backupTool-powershell/main"
 
 $FilesToDownload = @(
     "Backup.exe",

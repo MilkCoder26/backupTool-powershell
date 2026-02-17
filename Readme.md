@@ -25,7 +25,7 @@ The tool is designed to be:
 
 ---
 
-## 📂 Backup Modes Explained
+## Backup Modes Explained
 
 ### 🔹 Complete
 
@@ -58,7 +58,7 @@ Simulates a backup without copying any data.
 
 ---
 
-## 🧰 Folder Structure (after installation)
+## Folder Structure (after installation)
 
 ```
 C:\Users\<User>\BackupTools\
@@ -74,7 +74,7 @@ Each user gets their own `logs` folder, making the tool multi-user safe.
 
 ---
 
-## 🖥️ Installation
+## Installation
 
 ### Using `install.ps1` (Recommended)
 
@@ -96,7 +96,7 @@ pwsh -NoProfile -Command `
 
 ---
 
-## ▶️ Usage
+## Usage
 
 ### Graphical Interface (Recommended for end users)
 
@@ -126,7 +126,7 @@ DiskCopy -SourcePath "E:\" -DestinationRoot "D:\" -Mode Complete
 
 ---
 
-## 📝 Logs
+## Logs
 
 Logs are stored per user:
 
@@ -142,14 +142,14 @@ DiskCopy_dd-MM-yyyy.log
 
 ---
 
-## 🔐 Permissions & Notes
+## Permissions & Notes
 
 - RoboCopy automatically skips protected system folders
 - Antivirus software may flag unsigned executables (false positives)
 
 ---
 
-## 🧪 Typical Use Cases
+## Typical Use Cases
 
 - Personal computer disk backup
 - External drive synchronization
@@ -159,7 +159,7 @@ DiskCopy_dd-MM-yyyy.log
 
 ---
 
-## 📦 Technology Used
+## Technology Used
 
 - **PowerShell**
 - **Windows Forms** (WinForms)
