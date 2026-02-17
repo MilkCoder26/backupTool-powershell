@@ -82,7 +82,7 @@ Download `install.ps1` :
 
 ```powershell
 pwsh -NoProfile -Command `
-  "iwr https://raw.githubusercontent.com/MilkCoder26/backupTools-powershell/main/install.ps1 -UseBasicParsing | iex"
+  "iwr https://raw.githubusercontent.com/MilkCoder26/backupTool-powershell/main/install.ps1 -UseBasicParsing | iex"
 ```
 
 **What the installer does:**
